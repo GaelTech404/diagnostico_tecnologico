@@ -48,4 +48,4 @@ Responder preguntas del usuario desde el módulo de asesor
 ---
 ### 📷 Vista previa
 
-![Vista previa del sistema](https://raw.githubusercontent.com/GaelTech404/diagnostico_tecnologico/main/public/assets/img/asesor.jpg)
+![Vista previa del sistema](https://raw.githubusercontent.com/GaelTech404/diagnostico_tecnologico/main/public/assets/img/madurez_tech.jpg)
