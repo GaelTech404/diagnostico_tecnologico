@@ -1,0 +1,32 @@
+# 🚫 Configuración sensible
+/app/config/ia_config.php
+
+# ⚙️ Archivos de entorno
+.env
+*.env
+
+# 🧪 Logs y temporales
+*.log
+*.tmp
+*.cache
+
+# 💻 Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# 🛠 IDEs
+.vscode/
+.idea/
+
+# 🔄 Backups o archivos antiguos
+*.bak
+*.old
+*.orig
+
+# 🐘 Composer
+vendor/
+
+# 🧪 PHPUnit 
+phpunit.xml
+phpunit.result.cache
+coverage/

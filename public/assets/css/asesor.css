@@ -1,0 +1,112 @@
+#chat-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 340px;
+    max-height: 180vh;
+    background-color: var(--bs-body-bg);
+    border: 0.3rem solid var(--sidebar-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+
+@media (min-width: 768px) {
+    .chat-flotante {
+        width: 320px;
+    }
+}
+
+.chat-flotante.oculto {
+    display: none !important;
+}
+
+.chat-header {
+    background-color: var(--sidebar-bg);
+    padding: 10px 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: var(--bs-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.chat-box {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 420px;
+    scroll-behavior: smooth;
+    color: var(--bs-body-color);
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.chat-message.user {
+    text-align: right;
+    color: var(--bs-body-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-left: 4px solid var(--form-hover);
+    border-radius: 4px;
+}
+
+.chat-message.bot {
+    text-align: left;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 8px;
+    border-left: 4px solid var(--bs-secondary);
+    border-radius: 4px;
+}
+
+.chat-body form {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.chat-body input[type="text"] {
+    flex: 1;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid var(--bs-border-color, #ccc);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    margin: 0.3rem;
+
+}
+
+.chat-body button {
+    padding: 3px 9px;
+    background-color: var(--sidebar-bg);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0.4rem;
+}
+
+
+
+.preguntas-rapidas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}

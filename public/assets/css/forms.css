@@ -1,0 +1,75 @@
+/* ==============================
+   FORMS.CSS - Formularios (con soporte dark)
+   ============================== */
+
+.exam-form-question {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 30px;
+}
+
+.exam-form-question label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Opciones */
+.options label {
+    display: block;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid var(--form-border, #ddd);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: var(--sidebar-bg);
+    color: var(--form-text, #000);
+}
+
+
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Botones */
+.exam-form-question button[type="submit"],
+.exam-form-question button[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exam-form-question button[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+.exam-form-question button[type="button"] {
+    background-color: #f44336;
+}
+
+.exam-form-question button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: var(--progress-bg, #eee);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background-color: var(--progress-fill, #1abc9c);
+    transition: width 0.4s ease;
+}

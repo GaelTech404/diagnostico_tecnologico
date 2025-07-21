@@ -1,0 +1,36 @@
+/* ===============================
+   BASE.CSS - Estilos generales
+   =============================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Badges (niveles, promedios, etc.) */
+.badge {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge.nivel {
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+}
+
+.badge.promedio {
+    background-color: var(--bs-success);
+    color: var(--bs-light);
+}
+
+.badge.total {
+    background-color: var(--bs-warning);
+    color: var(--bs-dark);
+}
+
+

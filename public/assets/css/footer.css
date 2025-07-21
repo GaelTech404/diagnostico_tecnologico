@@ -1,0 +1,19 @@
+:root,
+[data-bs-theme='light'] {
+    --footer-bg: #f4f4f4;
+    --footer-text: #666;
+}
+
+[data-bs-theme='dark'] {
+    --footer-bg: #1e1e1e;
+    --footer-text: #aaa;
+}
+
+.main-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

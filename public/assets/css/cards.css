@@ -1,0 +1,106 @@
+/* ===============================
+   VARIABLES (opcional si usas modo dark/light)
+   =============================== */
+:root {
+    --color-principal: #1abc9c;
+    --color-hover: #ecf0f1;
+    --bg-light: #ffffff;
+    --text-light: #1abc9c;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ===============================
+   TARJETAS GENERALES
+   =============================== */
+
+.exam-result-card,
+.historial-card,
+.recommendation-card {
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--sidebar-bg);
+}
+
+.card {
+
+    width: 100%;
+    max-width: 320px;
+    height: 350px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex: 1 1 280px;
+
+
+    min-width: 240px;
+}
+
+.card:hover,
+.historial-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===============================
+   CONTENIDO DE LA TARJETA
+   =============================== */
+.card h3,
+.historial-card h3 {
+    font-size: 1.2rem;
+}
+
+.card p,
+.historial-card p {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ===============================
+   ENLACES
+   =============================== */
+.link {
+    text-align: center;
+    margin-top: auto;
+}
+
+.link a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link a:hover {
+    background-color: var(--color-hover);
+}

@@ -1,0 +1,156 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    background-color: var(--sidebar-bg);
+    color: var(--bs-body-color);
+}
+
+.sidebar-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 1rem;
+}
+
+/* Footer del sidebar (botones asesor y tema) */
+.sidebar-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Botones */
+.boton-chat,
+.btn-tema-toggle {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    color: var(--bs-body-color);
+}
+
+.options label:hover,
+.sidebar-nav a:hover,
+.boton-chat:hover,
+.btn-tema-toggle:hover,
+.chat-body button:hover,
+.preguntas-rapidas button:hover {
+    background-color: var(--form-hover);
+    color: #000000;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 0;
+    /* o padding más pequeño si quieres */
+    min-width: 0;
+    /* <-- IMPORTANTE para evitar overflows */
+}
+
+@media (prefers-color-scheme: dark) {
+    .tooltip-inner {
+        background-color: #1abc9c !important;
+        color: #fff !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .tooltip-inner {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        color: #fff !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 4rem;
+        height: 100vh;
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-nav li {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .sidebar-footer {
+        flex-direction: column;
+        margin-top: auto;
+    }
+
+    .main-content {
+        margin-left: 4rem;
+        /* igual al ancho del sidebar */
+        padding: 1rem;
+    }
+
+    .texto-modulo {
+        display: none;
+    }
+}
+
+/* Imagen por defecto (modo claro) */
+.logo-tema {
+    content: url('../img/tecnodiag-dark.png');
+    /* Ajusta la ruta según dónde esté tu tema.css */
+    max-height: 60000px;
+    object-fit: cover;
+}
+
+/* Imagen en modo oscuro */
+[data-bs-theme="dark"] .logo-tema {
+    content: url('../img/tecnodiag.png');
+}
